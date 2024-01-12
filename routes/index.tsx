@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-  <div class="w-screen h-screen items-center justify-center flex text-8xl">
+  <div class="w-screen h-screen flex items-center justify-center text-8xl">
     <p>😊</p>
   </div>
   );
