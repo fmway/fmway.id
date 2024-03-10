@@ -47,7 +47,7 @@ export DENO_INSTALL="\$HOME/.deno"
 export PATH="\$DENO_INSTALL/bin:\$PATH"
 source <(deno completions bash)
 EOF
-fish -c 'set -Ux DENO_INSTALL $HOME/.deno ; set -Ua fish_user_paths $DENO_INSTALL/bin'
+fish -c 'set -Ux DENO_INSTALL $HOME/.deno ; fish_add_path $DENO_INSTALL/bin'
 mkdir -pv ~/.config/fish/completions
 ~/.deno/bin/deno completions fish > ~/.config/fish/completions/deno.fish
 
@@ -58,7 +58,7 @@ echo 'source $HOME/.local/share/fzf-obc/bin/fzf-obc.bash' >> ~/.bashrc
 # setup rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 echo 'source "$HOME/.cargo/env"' >> ~/.bashrc
-fish -c 'set -Ua fish_user_paths $HOME/.cargo/env'
+fish -c 'fish_add_path $HOME/.cargo/env'
 
 # setup tmux
 # TODO
