@@ -39,7 +39,7 @@ git clone https://github.com/fmway/nvchad-old.git ~/.config/nvim
 # setup deno
 curl -fsSL https://deno.land/install.sh | sh
 cat >> ~/.bashrc <<EOF
-export DENO_INSTALL=”\$HOME/.deno”
+export DENO_INSTALL="\$HOME/.deno"
 export PATH="\$DENO_INSTALL/bin:\$PATH"
 source <(deno completions bash)
 EOF
