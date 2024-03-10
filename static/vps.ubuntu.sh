@@ -10,6 +10,10 @@ ${SUDO[@]} apt install -y neovim python3-dev python3-pip fish build-essential cl
 
 # setup fish
 # ${SUDO[@]} usermod codespace -s /usr/bin/fish
+${SUDO[@]} apt-add-repository ppa:fish-shell/release-3
+${SUDO[@]} apt update
+${SUDO[@]} apt autoremove fish -y
+${SUDO[@]} apt install fish -y
 mkdir -p ~/.config/fish/functions
 cat > ~/.config/fish/functions/fish_greeting.fish <<EOF
 function fish_greeting
