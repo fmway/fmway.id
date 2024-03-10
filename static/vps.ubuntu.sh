@@ -9,7 +9,7 @@ ${SUDO[@]} apt update
 ${SUDO[@]} apt install -y neovim python3-dev python3-pip fish build-essential clangd fzf tmux
 
 # setup fish
-${SUDO[@]} usermod codespace -s /usr/bin/fish
+# ${SUDO[@]} usermod codespace -s /usr/bin/fish
 mkdir -p ~/.config/fish/functions
 cat > ~/.config/fish/functions/fish_greeting.fish <<EOF
 function fish_greeting
@@ -32,8 +32,9 @@ OK MIN
 echo "source <(starship init bash)" >> ~/.bashrc
 
 # setup nvchad
-git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
+# git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
 # git clone https://github.com/NvChad/example_config ~/.config/nvim/lua/custom
+git clone https://github.com/fmway/nvchad-old.git ~/.config/nvim
 
 # setup deno
 curl -fsSL https://deno.land/install.sh | sh
