@@ -11,7 +11,7 @@
   "[javascriptreact]": {
     "editor.defaultFormatter": "denoland.vscode-deno"
   },
-  "[javascript]": {
+  "[javascript]": { 
     "editor.defaultFormatter": "denoland.vscode-deno"
   },
   "css.customData": [
