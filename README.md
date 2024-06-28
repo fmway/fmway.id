@@ -1,6 +1,5 @@
 # fmway.me
-> [!NOTE]
-> This project using [Deno Fresh](https://fresh.deno.dev) framework
+[![Made with Fresh](https://fresh.deno.dev/fresh-badge.svg)](https://fresh.deno.dev)
 
 ### Usage
 
