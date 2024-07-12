@@ -18,7 +18,8 @@ export async function handler(req: Request, ctx: FreshContext): Promise<Response
       emoji = getRandomEmoji();
     };
     const res = await fetch('https://twemoji.deno.dev/api?emoji=' + encodeURI(emoji));
-    return await fetch(await res.text());
+    const request = "https://raw.githubusercontent.com/aranja/emoji-to-png/master/static/emoji-data/img-apple-64/" + (await res.text()).split('/').reverse().at(0) || '';
+    return await fetch(request);
   }
 
   return await ctx.next();
