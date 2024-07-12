@@ -12,11 +12,15 @@ export async function handler(req: Request, ctx: FreshContext): Promise<Response
 
   if (path === '/' && url.searchParams.has('image')) {
     const random = url.searchParams.has('random');
-    let emoji = '😘';
+    const defaultEmoji = '😘';
+    let emoji = defaultEmoji;
     if (random) {
       emoji = getRandomEmoji();
     };
-    return await fetch('https://emoji.aranja.com/' + emoji);
+    const res = await fetch('https://emoji.aranja.com/' + emoji);
+    if (res.ok)
+      return res;
+    return await fetch('https://emoji.aranja.com/' + defaultEmoji);
   }
 
   return await ctx.next();
