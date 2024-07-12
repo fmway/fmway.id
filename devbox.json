@@ -8,7 +8,8 @@
     "scripts": {
       "start": "deno task preview",
       "build": "deno task build",
-      "dev": "deno task start"
+      "dev":   "deno task start"
     }
-  }
+  },
+  "env_from": "jetpack-cloud"
 }
