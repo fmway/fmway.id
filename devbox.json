@@ -6,7 +6,9 @@
   "shell": {
     "init_hook": [],
     "scripts": {
-      "start": "deno task start"
+      "start": "deno task preview",
+      "build": "deno task build",
+      "dev": "deno task start"
     }
   }
 }
