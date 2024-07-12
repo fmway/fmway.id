@@ -15,7 +15,7 @@ export const emojies: Record<Emoji, string[]> = {
 } 
 
 // TODO
-export const getRandomEmoji: (alias?: Emoji) => string = (alias?) => {
+export const getRandomEmoji: (alias?: Emoji) => string = (alias) => {
   if (!alias) return emoji.random().emoji;
   const em = emojies[alias];
   const idx = Math.floor(Math.random() * em.length);

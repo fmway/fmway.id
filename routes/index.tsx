@@ -20,8 +20,8 @@ export const handler: Handlers<Data> = {
 
 export default function Home({ data }: PageProps<Data>) {
   return (
-  <div class="w-screen h-screen flex items-center justify-center text-8xl">
-    <p>{ data.emoji }</p>
-  </div>
+    <div class="w-screen h-screen flex items-center justify-center text-8xl">
+      <p>{ data.emoji }</p>
+    </div>
   );
 }

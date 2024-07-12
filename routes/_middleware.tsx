@@ -1,14 +1,23 @@
 import { FreshContext } from "$fresh/server.ts";
 import { getRedirectUrl } from "$functions/social-media.ts";
+import { getRandomEmoji } from "$functions/emoji.ts";
 
-export function handler(req: Request, ctx: FreshContext): Response | Promise<Response> {
-  const sosmed = getRedirectUrl(new URL(req.url).pathname);
+export async function handler(req: Request, ctx: FreshContext): Promise<Response> {
+  const url = new URL(req.url);
+  const path = url.pathname;
+  const sosmed = getRedirectUrl(path);
   if (sosmed) {
     return Response.redirect(sosmed);
   }
-  return new Promise((resolve, reject) => {
-    ctx.next()
-      .then(res => resolve(res))
-      .catch(e => reject(e));
-  });
+
+  if (path === '/' && url.searchParams.has('image')) {
+    const random = url.searchParams.has('random');
+    let emoji = '😘';
+    if (random) {
+      emoji = getRandomEmoji();
+    };
+    return await fetch('https://emoji.aranja.com/' + emoji);
+  }
+
+  return await ctx.next();
 }
