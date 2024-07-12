@@ -17,10 +17,8 @@ export async function handler(req: Request, ctx: FreshContext): Promise<Response
     if (random) {
       emoji = getRandomEmoji();
     };
-    const res = await fetch('https://emoji.aranja.com/' + emoji);
-    if (res.ok)
-      return res;
-    return await fetch('https://emoji.aranja.com/' + defaultEmoji);
+    const res = await fetch('https://twemoji.deno.dev/api?emoji=' + encodeURI(emoji));
+    return await fetch(await res.text());
   }
 
   return await ctx.next();
