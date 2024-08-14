@@ -11,7 +11,7 @@
   },
   "lint": { "rules": { "tags": ["fresh", "recommended"] } },
   "exclude": ["**/_fresh/*"],
-  "unstable": ["kv"],
+  "unstable": [ "kv", "cron" ],
   "imports": {
     "$fresh/": "https://deno.land/x/fresh@1.6.8/",
     "zod": "https://deno.land/x/zod@v3.16.1/mod.ts",

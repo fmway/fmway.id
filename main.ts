@@ -11,4 +11,5 @@ import { start } from "$fresh/server.ts";
 import manifest from "./fresh.gen.ts";
 import config from "./fresh.config.ts";
 
+Deno.cron("simple cron", "*/5 * * * *", () => console.log("hello"))
 await start(manifest, config);
