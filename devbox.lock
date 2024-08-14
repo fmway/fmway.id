@@ -2,50 +2,50 @@
   "lockfile_version": "1",
   "packages": {
     "deno@latest": {
-      "last_modified": "2024-07-07T16:08:25Z",
-      "resolved": "github:NixOS/nixpkgs/ab82a9612aa45284d4adf69ee81871a389669a9e#deno",
+      "last_modified": "2024-08-02T23:16:43Z",
+      "resolved": "github:NixOS/nixpkgs/81610abc161d4021b29199aa464d6a1a521e0cc9#deno",
       "source": "devbox-search",
-      "version": "1.44.4",
+      "version": "1.45.4",
       "systems": {
         "aarch64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/xl2avdvavb67m42ml8jkkr25i6aaaj14-deno-1.44.4",
+              "path": "/nix/store/fm7gg5dnd2rc7gyyyqbw20hzzqaz1vp9-deno-1.45.4",
               "default": true
             }
           ],
-          "store_path": "/nix/store/xl2avdvavb67m42ml8jkkr25i6aaaj14-deno-1.44.4"
+          "store_path": "/nix/store/fm7gg5dnd2rc7gyyyqbw20hzzqaz1vp9-deno-1.45.4"
         },
         "aarch64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/by7kk8zrzp72k8pyapn47dj7xbh9a67w-deno-1.44.4",
+              "path": "/nix/store/9bri8wahxmbp3bh8kvs2ijx1jn10mbpv-deno-1.45.4",
               "default": true
             }
           ],
-          "store_path": "/nix/store/by7kk8zrzp72k8pyapn47dj7xbh9a67w-deno-1.44.4"
+          "store_path": "/nix/store/9bri8wahxmbp3bh8kvs2ijx1jn10mbpv-deno-1.45.4"
         },
         "x86_64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/wzpdn6zkyp5xjwhbq84hlfbd2v62j2a1-deno-1.44.4",
+              "path": "/nix/store/zhc0jmbv9aghdxh7ma32vrfrq3ila8dr-deno-1.45.4",
               "default": true
             }
           ],
-          "store_path": "/nix/store/wzpdn6zkyp5xjwhbq84hlfbd2v62j2a1-deno-1.44.4"
+          "store_path": "/nix/store/zhc0jmbv9aghdxh7ma32vrfrq3ila8dr-deno-1.45.4"
         },
         "x86_64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/2lwfgbk1xfjjcp2jrm708p59ciqmzavp-deno-1.44.4",
+              "path": "/nix/store/yl3gck9vvv8j2h820n50vf155d1z2bv5-deno-1.45.4",
               "default": true
             }
           ],
-          "store_path": "/nix/store/2lwfgbk1xfjjcp2jrm708p59ciqmzavp-deno-1.44.4"
+          "store_path": "/nix/store/yl3gck9vvv8j2h820n50vf155d1z2bv5-deno-1.45.4"
         }
       }
     }
