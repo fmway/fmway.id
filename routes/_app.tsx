@@ -11,7 +11,7 @@ export default function App({ Component }: PageProps) {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="FmWay" />
         <meta property="og:description" content="Way to Future Moments (FmWay)" />
-        <meta property="og:image" content="/images/fmway.png" />
+        <meta property="og:image" content="/images/fmway.jpg" />
   
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -19,7 +19,7 @@ export default function App({ Component }: PageProps) {
         <meta property="twitter:url" content="https://fmway.id" />
         <meta name="twitter:title" content="FmWay" />
         <meta name="twitter:description" content="Way to Future Moments (FmWay)" />
-        <meta name="twitter:image" content="/images/fmway.png" />
+        <meta name="twitter:image" content="/images/fmway.jpg" />
         <title>FmWay</title>
         <link rel="stylesheet" href="/styles.css" />
       </head>
