@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/denoland/deno/refs/tags/v2.1.4/cli/schemas/config-file.v1.json",
   "lock": false,
   "tasks": {
     "check": "deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
@@ -29,6 +30,7 @@
     "me": "./me.json",
     "emoji": "https://deno.land/x/emoji@0.3.0/mod.ts"
   },
+  "workspace": [ "./deps/url-shortener" ],
   "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" },
   "nodeModulesDir": true
 }

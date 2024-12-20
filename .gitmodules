@@ -1,0 +1,3 @@
+[submodule "deps/url-shortener"]
+	path = deps/url-shortener
+	url = git@github.com:fmway/url-shortener
