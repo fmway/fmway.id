@@ -1,5 +1,5 @@
 <!-- date: Sel 13 Agu 2024 12:29:11 WIB -->
-# fmway.me <img alt="" src="https://fmway.me/?image" width="25" />
+# fmway.id <img alt="" src="https://fmway.id/?image" width="25" />
 [![Made with Fresh](https://fresh.deno.dev/fresh-badge.svg)](https://fresh.deno.dev)
 
 ### Usage
