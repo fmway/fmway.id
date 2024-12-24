@@ -1,0 +1,55 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '0 */5 * * *' # every 5 hours
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    permissions: write-all
+
+    steps:
+    - name: Clone repository
+      uses: actions/checkout@main
+      with:
+        submodules: true
+
+    - name: Update Submodule
+      if: github.event_name == 'schedule'
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      run: |
+        git config --global user.name 'little fmway'
+        git config --global user.email 'fm18lv@gmail.com'
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+        git submodule foreach git pull origin master
+        if [ -n "$(git status --short)" ]; then
+          echo "Update submodule"
+          git add -A
+          git commit -m "chore(*): Update submodule"
+          git push origin main
+        fi
+
+    - name: Install Deno
+      if: github.event_name != 'schedule'
+      uses: denoland/setup-deno@v1
+      with:
+        deno-version: v1.x
+
+    - name: Build step
+      if: github.event_name != 'schedule'
+      run: "deno task build" # 📝 Update the build command(s) if necessary
+
+    - name: Upload to Deno Deploy
+      if: github.event_name != 'schedule'
+      uses: denoland/deployctl@v1
+      with:
+        project: "fmway"
+        entrypoint: "main.ts" # 📝 Update the entrypoint if necessary
+        root: "." # 📝 Update the root if necessary
