@@ -28,7 +28,7 @@ jobs:
         git config --global user.name 'little fmway'
         git config --global user.email 'fm18lv@gmail.com'
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
-        git submodule foreach git pull origin master
+        git submodule foreach "(git checkout master; git pull --force)"
         if [ -n "$(git status --short)" ]; then
           echo "Update submodule"
           git add -A
