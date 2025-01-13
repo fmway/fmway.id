@@ -12,7 +12,7 @@ export async function handler(req: Request, ctx: FreshContext): Promise<Response
   }
 
   if (path.slice(0, 3) == '/s/') {
-    return nestingRequest("/s/").fetch(req);
+    return nestingRequest("/s").fetch(req);
   }
 
   if (path === '/' && url.searchParams.has('image')) {
