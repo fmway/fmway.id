@@ -22,6 +22,7 @@ jobs:
         fetch-depth: 0
 
     - name: Update Submodule
+      id: submodule
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       run: |
@@ -35,20 +36,22 @@ jobs:
           git add -A
           git commit -m "chore(*): Update submodule"
           git push origin main
+        else
+          echo "skip=true" >> "$GITHUB_OUTPUT"
         fi
 
     - name: Install Deno
-      if: github.event_name != 'schedule'
+      if: ${{ github.event_name != 'schedule' || !steps.submodule.outputs.skip }}
       uses: denoland/setup-deno@v2
       with:
         deno-version: v2.x
 
     - name: Build step
-      if: github.event_name != 'schedule'
+      if: ${{ github.event_name != 'schedule' || !steps.submodule.outputs.skip }}
       run: "deno task build" # 📝 Update the build command(s) if necessary
 
     - name: Upload to Deno Deploy
-      if: github.event_name != 'schedule'
+      if: ${{ github.event_name != 'schedule' || !steps.submodule.outputs.skip }}
       uses: denoland/deployctl@v1
       with:
         project: "fmway"
