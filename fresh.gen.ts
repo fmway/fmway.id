@@ -6,9 +6,33 @@ import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $_middleware from "./routes/_middleware.tsx";
 import * as $api_joke from "./routes/api/joke.ts";
-import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
+import * as $a_index from "./routes/a/index.tsx";
+import * as $b_index from "./routes/b/index.tsx";
+import * as $c_index from "./routes/c/index.tsx";
+import * as $d_index from "./routes/d/index.tsx";
+import * as $e_index from "./routes/e/index.tsx";
+import * as $f_index from "./routes/f/index.tsx";
+import * as $g_index from "./routes/g/index.tsx";
+import * as $h_index from "./routes/h/index.tsx";
+import * as $i_index from "./routes/i/index.tsx";
+import * as $j_index from "./routes/j/index.tsx";
+import * as $k_index from "./routes/k/index.tsx";
+import * as $l_index from "./routes/l/index.tsx";
+import * as $m_index from "./routes/m/index.tsx";
+import * as $n_index from "./routes/n/index.tsx";
+import * as $o_index from "./routes/o/index.tsx";
 import * as $p_index from "./routes/p/index.tsx";
+import * as $q_index from "./routes/q/index.tsx";
+import * as $r_index from "./routes/r/index.tsx";
+import * as $s_index from "./routes/s/index.tsx";
+import * as $t_index from "./routes/t/index.tsx";
+import * as $u_index from "./routes/u/index.tsx";
+import * as $v_index from "./routes/v/index.tsx";
+import * as $w_index from "./routes/w/index.tsx";
+import * as $x_index from "./routes/x/index.tsx";
+import * as $y_index from "./routes/y/index.tsx";
+import * as $z_index from "./routes/z/index.tsx";
 import * as $Counter from "./islands/Counter.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
@@ -18,9 +42,33 @@ const manifest = {
     "./routes/_app.tsx": $_app,
     "./routes/_middleware.tsx": $_middleware,
     "./routes/api/joke.ts": $api_joke,
-    "./routes/greet/[name].tsx": $greet_name_,
     "./routes/index.tsx": $index,
+    "./routes/a/index.tsx": $a_index,
+    "./routes/b/index.tsx": $b_index,
+    "./routes/c/index.tsx": $c_index,
+    "./routes/d/index.tsx": $d_index,
+    "./routes/e/index.tsx": $e_index,
+    "./routes/f/index.tsx": $f_index,
+    "./routes/g/index.tsx": $g_index,
+    "./routes/h/index.tsx": $h_index,
+    "./routes/i/index.tsx": $i_index,
+    "./routes/j/index.tsx": $j_index,
+    "./routes/k/index.tsx": $k_index,
+    "./routes/l/index.tsx": $l_index,
+    "./routes/m/index.tsx": $m_index,
+    "./routes/n/index.tsx": $n_index,
+    "./routes/o/index.tsx": $o_index,
     "./routes/p/index.tsx": $p_index,
+    "./routes/q/index.tsx": $q_index,
+    "./routes/r/index.tsx": $r_index,
+    "./routes/s/index.tsx": $s_index,
+    "./routes/t/index.tsx": $t_index,
+    "./routes/u/index.tsx": $u_index,
+    "./routes/v/index.tsx": $v_index,
+    "./routes/w/index.tsx": $w_index,
+    "./routes/x/index.tsx": $x_index,
+    "./routes/y/index.tsx": $y_index,
+    "./routes/z/index.tsx": $z_index,
   },
   islands: {
     "./islands/Counter.tsx": $Counter,

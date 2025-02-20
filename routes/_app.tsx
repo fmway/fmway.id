@@ -22,6 +22,8 @@ export default function App({ Component }: PageProps) {
         <meta name="twitter:image" content="/images/fmway.jpg" />
         <title>FmWay</title>
         <link rel="stylesheet" href="/styles.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
       </head>
       <body>
         <Component />
